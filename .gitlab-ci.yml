@@ -19,7 +19,7 @@ Build:
   script:
     - mkdir data/
     - docker build --compress -t proxy .
-    - docker save --output data/image.tar proxy # we save proxy image to pass it to Push stage
+    - docker save --output data/image.tar proxy # we save proxy image to pass it to Push stage.
   artifacts: # all content of data/ directory will be passed to other stages
     name: image
     paths:
