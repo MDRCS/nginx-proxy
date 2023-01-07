@@ -6,7 +6,7 @@ stages:
   - Build
   - Push
  
-# before_script section will be run before every stage (Build/Stage)
+# before_script section will be run before every stage (Build/Stage).
 before_script:
   - apk add python3
   - pip3 install awscli==1.18.8
@@ -20,7 +20,7 @@ Build:
     - mkdir data/
     - docker build --compress -t proxy .
     - docker save --output data/image.tar proxy # we save proxy image to pass it to Push stage.
-  artifacts: # all content of data/ directory will be passed to other stages
+  artifacts: # all content of data/ directory will be passed to other stages.
     name: image
     paths:
       - data/
